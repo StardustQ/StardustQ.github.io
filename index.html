@@ -1,0 +1,15 @@
+<div style="font-weight:bold; " class="ui bottom attached center aligned segment">
+          <div class="ui centered inline loader" id="hitokoto-loader"></div>
+          <script>
+          $.get('https://v1.hitokoto.cn/?c=a', function (data) {
+            if (typeof data === 'string') data = JSON.parse(data);
+            $('#hitokoto-loader').removeClass('active');
+            $('#hitokoto-content').css('display', '').text(data.hitokoto);
+            if (data.from) {
+              $('#hitokoto-from').css('display', '').text('——' + data.from);
+            }
+          });
+          </script>
+          <div style="font-size: 1em; line-height: 1.5em;" id="hitokoto-content">想象力足以改变一切。</div>
+          <div style="text-align: right; margin-top: 15px; font-size: 0.9em; color: rgb(102, 102, 102);" id="hitokoto-from">——来自新世界</div>
+        </div>
