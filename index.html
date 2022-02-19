@@ -17,4 +17,18 @@
     })
 </script>
 
-<script src="https://files.cnblogs.com/files/quaint/sakuraPlus.js"></script>
+<script type="text/javascript">//樱花
+ var system ={}; 
+ var p = navigator.platform; 
+ system.win = p.indexOf("Win") == 0; 
+ system.mac = p.indexOf("Mac") == 0; 
+ system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+ if(system.win||system.mac||system.xll){//如果是电脑
+ <!-- 也可以将下面链接复制到浏览器地址栏处 将页面所有文本复制保存到你的电脑命名为sakura.js并在你的博客园中上传该文件，之后可以把下面的链接换成你自己的 -->
+ $.getScript("https://blog-static.cnblogs.com/files/blogs/696160/sakura.js");
+ }else{ //如果是手机
+ 
+ }
+<!-- 可以通过调整该数字大小控制飘落樱花数量 -->
+ var SAKURA_N = 20;
+</script>
